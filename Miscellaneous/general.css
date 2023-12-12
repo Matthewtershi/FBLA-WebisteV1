@@ -1,4 +1,14 @@
 @import '/Miscellaneous/node_modules/bootstrap/main.css';
+:root {
+  --background-light: #262a33;
+  --background: #191d26;
+  --background-dark: #0f0f0f;
+  
+  --accent-light: #d16163;
+  --accent: #bb3f41;
+  --accent-dark: #692829;
+}
+
 
 /***** GENERAL *****/
 html body {
