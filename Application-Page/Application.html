@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MYTHOS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../Miscellaneous/general.css" rel="stylesheet">
+  <link href="Application.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="custom-nav bottom-space show navbar navbar-expand-sm bg-primary-grad sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#body">
+        <strong class="brandName">
+          MYTHOS
+        </strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarPortion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="justify-content-end collpase navbar-collapse" id="collapsibleNavbarPortion">
+        <ul class="ml-auto navbar-nav text-secondary">
+          <li class="nav-item m-3">
+            <a class="nav-link underline-hover-primary" href="../Main-Page/Main-Page.html">Home</a>
+          </li>
+          <li class="nav-item m-3">
+            <a class="nav-link underline-hover-primary" href="../About-Us-Page/AboutUs.html">Who We Are</a>
+          </li>
+          <li class="nav-item m-3">
+            <a class="nav-link underline-hover-primary" href="../Openings-Page/Openings.html">Join
+              The Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="auto-center">
+    <div id="application-form-parent" class="">
+      <div id="header">
+        <h2>
+          Application Form
+        </h2>
+
+        <select name="position" id="positionSelector">
+          <optgroup label="Programming">
+            <option value="network manager">Network Manager</option>
+            <option value="Lead programmer">Lead Programmer</option>
+            <option value="Game Server Engineer">Game Server Engineer</option>
+            <option value="Senior Gameplay Programmer">Senior Gameplay Programmer</option>
+          </optgroup>
+          <optgroup label="Art">
+            <option value="Visual Artist">Visual Artist</option>
+            <option value="Concept Artist">Concept Artist</option>
+            <option value="3D Enviroment Artist">3D Enviroment Artist</option>
+            <option value="UI/UX Designer">UI/UX Designer</option>
+          </optgroup>
+          <optgroup label="Audio">
+            <option value="Sound Designer">Sound Designer</option>
+            <option value="Audio Artist">Audio Artist</option>
+            <option value="Composer">Composer</option>
+            <option value="Audio Engineer">Audio Engineer</option>
+          </optgroup>
+        </select>
+      </div>
+      <form id="myForm"
+        action="https://script.google.com/macros/s/AKfycbxjIXnkiQHjUh1h5x9cAy3kSQmFrQ1ecl15fJvk35MpUcZiVhX2aESZdAVg8P5Hi-WGOQ/exec"
+        method="POST">
+        
+        <div class="mb-3">
+          <label for="pwd">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="John Doe" name="name">
+        </div>
+
+        <div class="mb-3 mt-3">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+        </div>
+
+        <div class="my-3 applicant-resume" name="resume">
+          <label for="formFile" class="form-label"> Upload Google Drive Link to Resume</label>
+          <input type="text" class="form-control" id="resume"
+            placeholder="https://docs.google.com/document/...=sharing" name="resume" required>
+        </div>
+
+        <div>
+          <label for="personalStatement">Personal Statement:</label>
+          <textarea maxlength="1000" type="text" class="form-control" id="personal-statement"
+            placeholder="I think I would work well here because..." name="statement" required></textarea>
+        </div>
+        
+        <div>
+          <div id="submitButton" name="submit" type="submit">
+            <p>
+              Submit
+            </p>
+          </div>
+        </div>
+
+        <div class="my-3 d-none" id="loadingIcon">
+          <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+
+        <div id="NIHAO">
+          <label class="d-none">Result</label>
+          <input type="text" class="my-3 d-none" id="position" name="position">
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="Application.js"></script>
+</body>
+
+</html>
