@@ -1,1 +1,14 @@
 @import '/Miscellaneous/node_modules/bootstrap/main.css';
+
+.description {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 15px;
+    border: 10px solid #A13A3C;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    font-size: 30px;
+  }

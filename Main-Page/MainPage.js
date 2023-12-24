@@ -1,5 +1,17 @@
 const realityText = document.getElementById("reality");
 const accordion = document.getElementsByClassName("accordionElement");
+const choiceArray = document.querySelectorAll(".choice")
+
+choiceArray.forEach((card) => {
+    card.addEventListener("click", () => {
+        choiceArray.forEach((element) => {
+            element.classList.remove("expand", "unset")
+            element.classList.add('small')
+        })
+        card.classList.remove("small")
+        card.classList.add('expand')
+    });
+});
 
 for (i = 0; i < accordion.length; i++) {
     console.log(accordion[i].innerHTML);
@@ -42,6 +54,6 @@ function zoomin(e) {
             fill: 'both'
         },
     ).onfinish = function () {
-        window.location.href = "../Application-Page/ApplicationMain.html"
+        window.location.href = "../Application-Page/Application.html"
     };
 }
