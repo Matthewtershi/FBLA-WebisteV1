@@ -1,10 +1,10 @@
 var test = document.getElementById("NIHAO");
 var form = document.getElementById("myForm");
 var submitButton = document.getElementById("submitButton");
-var dropdownButton = document.getElementById("dropdownMenuButton");
+var dropdownButton = document.getElementById("positionSelector");
 var dropdownItems = document.querySelectorAll(".dropdown-item");
 var position = document.getElementById("position");
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjIXnkiQHjUh1h5x9cAy3kSQmFrQ1ecl15fJvk35MpUcZiVhX2aESZdAVg8P5Hi-WGOQ/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4PhZjkcBe1Bggj0AmYosHU2qPHjnwWIid5wYcPNyBcKVchBHCBEuSnApEBArqAtd7mQ/exec";
 
 //testing ok leave me alone
 /*test.addEventListener("click", function() {
@@ -16,10 +16,10 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjIXnkiQHjUh1h5x9cA
 
 });*/
 
-submitButton.addEventListener("click", function() {
+/*submitButton.addEventListener("click", function() {
     test.innerHTML = "NOOOOOOOOO";
     document.getElementById("loadingIcon").classList.remove("d-none");
-})
+})*/
 
 /*form.addEventListener("submit", e => {
     e.preventDefault()
@@ -40,7 +40,11 @@ submitButton.addEventListener("click", function() {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    var selectedPosition = dropdownButton.getAttribute("data-position");
+    /*var selectedPosition = dropdownButton.getAttribute("data-position");
+    var formData = new FormData(this);
+    formData.set("position", selectedPosition);*/
+    var selectedPosition = dropdownButton.getAttribute("value");
+    alert(selectedPosition);
     var formData = new FormData(this);
     formData.set("position", selectedPosition);
 

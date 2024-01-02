@@ -1,10 +1,10 @@
-var test = document.getElementById("NIHAO");
+var test = document.getElementById("test");
 var form = document.getElementById("myForm");
 var submitButton = document.getElementById("submitButton");
 var dropdownButton = document.getElementById("dropdownMenuButton");
 var dropdownItems = document.querySelectorAll(".dropdown-item");
 var position = document.getElementById("position");
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjIXnkiQHjUh1h5x9cAy3kSQmFrQ1ecl15fJvk35MpUcZiVhX2aESZdAVg8P5Hi-WGOQ/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4PhZjkcBe1Bggj0AmYosHU2qPHjnwWIid5wYcPNyBcKVchBHCBEuSnApEBArqAtd7mQ/exec";
 
 const accordion = document.getElementsByClassName("accordionElement");
 
@@ -46,41 +46,10 @@ dropdownItems.forEach(function (item) {
     })
 })
 
-//testing ok leave me alone
-/*test.addEventListener("click", function() {
-    if (test.innerHTML == "NI HAO") {
-        test.innerHTML = "IM SPECIAL";
-    } else {
-        test.innerHTML = "NI HAO";
-    }
-    
-});*/
-
-submitButton.addEventListener("click", function() {
-    test.innerHTML = "NOOOOOOOOO";
-    document.getElementById("loadingIcon").classList.remove("d-none");
-})
-
-/*form.addEventListener("submit", e => {
-    e.preventDefault()
-    console.log('SCRIPT_URL:', SCRIPT_URL);
-
-    fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Server response:', data);
-          position.textContent = "Form Has Been Updated!";
-        })
-        .catch(error => {
-          console.error('Error submitting form:', error);
-        });
-        
-})*/
-
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    var selectedPosition = dropdownButton.getAttribute("data-position");
+    var selectedPosition = dropdownButton.getAttribute("value");
     var formData = new FormData(this);
     formData.set("position", selectedPosition);
 
@@ -91,8 +60,9 @@ form.addEventListener("submit", function (e) {
         position.textContent = "Form Has Been Updated!";
 
         // Handle success
-        if (data.result === 'success') {
-          alert('Form has been submitted successfully. Updated row: ' + data.row);
+        if (data.result == 'success') {
+          //alert('Form has been submitted successfully. Updated row: ' + data.row);
+          window.location.href = "../Submission-Confirmation/Confirmation.html";
         } else {
           alert('Form submission failed.');
         }
