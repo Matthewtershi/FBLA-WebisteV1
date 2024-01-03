@@ -44,12 +44,12 @@ html body {
 }
 
 .info-card:hover {
-  box-shadow: 0px 0px 40px var(--accent);
+  box-shadow: 0px 0px 0px var(--accent);
   transform: scale(1.05);
   transition: 0.5s;
 }
 
-.applySection{
+.applySection {
   box-shadow: 0px 0px 10px black !important;
   border-radius: 15px;
   overflow: hidden;
@@ -62,7 +62,7 @@ html body {
   transition: 0.5s;
 }
 
-.applySection > *:nth-child(2) {
+.applySection>*:nth-child(2) {
   background: var(--accent);
 }
 
@@ -78,10 +78,25 @@ html body {
   border: 3px solid var(--accent);
   width: 200px;
   height: 50px;
+  margin-left: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.apply-link > * {
+  text-decoration: none;
+  color: var(--accent-dark);
+  text-align: center;
+}
+
+.apply-link:hover {
+  border-color: white;
+  color: white;
+  transition: 0.5s ease-in-out;
 }
 
 .info-card .info-card-title {
-  
+
   width: 100%;
   margin-left: 20px;
   display: flex;
@@ -90,12 +105,12 @@ html body {
   font-weight: bold;
 }
 
-.info-card .info-card-title :nth-child(1){
+.info-card .info-card-title :nth-child(1) {
   justify-content: flex-start;
   text-shadow: -2px 2px 4px var(--background);
 }
 
-.info-card .info-card-title :nth-child(2){
+.info-card .info-card-title :nth-child(2) {
   margin-left: auto;
   margin-right: 30px;
   background-color: var(--accent);
@@ -119,7 +134,7 @@ html body {
   margin: 10px 20px;
 }
 
-.accordionElement > .accordionHeader {
+.accordionElement>.accordionHeader {
   cursor: pointer;
   height: 45px;
   background-color: var(--background);
@@ -130,7 +145,7 @@ html body {
   transition: 0.5s;
 }
 
-.accordionElement.active > .accordionContent {
+.accordionElement.active>.accordionContent {
   height: 400px;
   padding: 10px;
 }
@@ -154,9 +169,9 @@ html body {
   width: 95vw;
 }
 
-.accordionElement.opening-group > .accordionHeader {
+.accordionElement.opening-group>.accordionHeader {
   background-color: var(--background);
-  
+
   border: 5px solid var(--accent);
   border-radius: 10px;
   height: 110px;
@@ -169,38 +184,38 @@ html body {
   align-items: center;
 }
 
-.accordionElement.opening-group > .accordionContent {
+.accordionElement.opening-group>.accordionContent {
   background: var(--background);
 
   height: auto;
-  
+
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.5s;
 }
 
-.accordionElement.opening-group > .accordionContent > .accordionContentHolder {
+.accordionElement.opening-group>.accordionContent>.accordionContentHolder {
   overflow: hidden;
 }
 
-.accordionElement.opening-group.active > .accordionContent {
+.accordionElement.opening-group.active>.accordionContent {
   grid-template-rows: 1fr;
   transition: 0.5s;
 }
 
-.accordionElement.opening-group.active > .accordionContent.height-one{
+.accordionElement.opening-group.active>.accordionContent.height-one {
   height: 263px;
 }
 
-.accordionElement.opening-group.active > .accordionContent.height-two{
+.accordionElement.opening-group.active>.accordionContent.height-two {
   height: 526px;
 }
-tr
-.accordionElement.opening-group.active > .accordionContent.height-three{
+
+tr .accordionElement.opening-group.active>.accordionContent.height-three {
   height: 789px;
 }
 
-.accordionElement.opening-group.active > .accordionContent.height-four{
+.accordionElement.opening-group.active>.accordionContent.height-four {
   height: 1220px;
 }
 

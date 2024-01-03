@@ -63,3 +63,12 @@ form.addEventListener("submit", function (e) {
         document.getElementById("loadingIcon").classList.add("d-none");
       });
   });
+
+
+// Assuming the URL is something like: https://www.example.com/page?param1=value1&param2=value2
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const job_input = urlParams.get('job');
+const job_dropdown = document.getElementById("positionSelector")
+job_dropdown.value = job_input;

@@ -147,11 +147,6 @@ body::-webkit-scrollbar {
 }
 
 /***** GRADIENTS *****/
-::selection {
-  background: var(--accent-light);
-  color: var(--background-dark);
-}
-
 .bg-primary-grad {
   background: linear-gradient(165deg, var(--background), var(--background), var(--background-light));
 }
@@ -198,7 +193,7 @@ body::-webkit-scrollbar {
   transition: opacity 300ms, transform 300ms;
 }
 
-/***** Info Card Left *****/
+/***** Info Card *****/
 .info-card {
   background: var(--accent-dark);
   border-radius: 10px;
