@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MYTHOS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../Miscellaneous/general.css" rel="stylesheet">
+  <link href="Openingsv2.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="custom-nav bottom-space show navbar navbar-expand-sm bg-primary-grad sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#body">
+        <strong class="brandName">
+          MYTHOS
+        </strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbarPortion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="justify-content-end collpase navbar-collapse" id="collapsibleNavbarPortion">
+        <ul class="ml-auto navbar-nav text-secondary">
+          <li class="nav-item m-3">
+            <a class="nav-link underline-hover-primary" href="../Main-Page/Main-Page.html">Home</a>
+          </li>
+          <li class="nav-item m-3">
+            <a class="nav-link underline-hover-primary" href="../About-Us-Page/AboutUs.html">Who We Are</a>
+          </li>
+          <li class="nav-item m-3">
+            <a class="nav-link underline-hover-primary" href="../Openings-Page/Openings.html">Join
+              The Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="test" class="auto-center">
+    <div class="auto-center description">
+      <div class="info-card-title">
+        <strong> Careers </strong>
+      </div>
+
+      <div class="info-card-content">
+        Embark on an unforgettable journey with us here at MYTHOS. Whether you’re a player seeking unparalleled 
+        adventures or a talent looking to contribute to the creation of an extraordinary world, MYTHOS welcomes 
+        you to a realm where legends are born, and myths come to life. <br>
+
+        <br>Are you ready to redefine the gaming experience? Join us on the quest to craft extraordinary worlds at MYTHOS.
+
+      </div>
+    </div>
+
+    <div data="Computer Programming" class="accordionElement opening-group">
+      <div class="accordionHeader">
+        <div>
+          Computer Programming
+        </div>
+      </div>
+      <div class="accordionContent height-four">
+        <!-- COMMENT YOUR POSITIONS GERMAN BOY WTF--> 
+        <div data="Network Manager" class="info-card">
+          <span>
+            <div class="info-card-title">
+              <span>
+                Network Manager
+              </span>
+              <span>
+                125k
+              </span>
+            </div>
+            <div class="info-card-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+              Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
+              Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+              Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+              Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+              Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
+              Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.
+              Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+            </div>
+            <div class="applySection accordionElement">
+              <div class="accordionHeader">
+                <span id="title">
+                  <h2>Apply Now</h2>
+                </span>
+              </div>
+              <div class="accordionContent">
+                <form id="myForm" action="insert.php" method="POST">
+
+                  <label for="date">Date (MM/DD/YYYY):</label>
+                  <input type="date" class="form-control" id="date" placeholder="Enter Date" name="date" required>
+
+                  <div class="mb-3">
+                    <label for="name">Full Name</label>
+                    <input type="name" class="form-control" id="name" placeholder="John Doe" name="name" required>
+                  </div>
+
+                  <div class="mb-3 mt-3">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+                  </div>
+
+                  <div class="my-3 applicant-resume" name="resume">
+                    <label for="formFile" class="form-label"> Upload Google Drive Link to Resume</label>
+                    <input type="text" class="form-control" id="resume"
+                      placeholder="https://docs.google.com/document/...=sharing" name="resume" required>
+                  </div>
+
+                  <input type="text" class="form-control invisible" id="dropdownMenuButton" name="position" value="Network Manager" data-position="Network Manager">
+
+                  <div>
+                    <button id="submitButton" name="submit" type="submit" class="btn btn-warning shadow-sm">Submit</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="Openingsv2.js"></script>
+</body>

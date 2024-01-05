@@ -171,21 +171,10 @@ html body {
 
 .accordionElement.opening-group > .accordionContent {
   background: var(--background);
-
-  height: auto;
-  
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.5s;
-}
-
-.accordionElement.opening-group > .accordionContent > .accordionContentHolder {
-  overflow: hidden;
 }
 
 .accordionElement.opening-group.active > .accordionContent {
-  grid-template-rows: 1fr;
-  transition: 0.5s;
+  height: auto;
 }
 
 .accordionElement.opening-group.active > .accordionContent.height-one{
