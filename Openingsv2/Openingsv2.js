@@ -1,5 +1,13 @@
-//Accordion elements
+var test = document.getElementById("test");
+var form = document.getElementById("myForm");
+var submitButton = document.getElementById("submitButton");
+var dropdownButton = document.getElementById("dropdownMenuButton");
+var dropdownItems = document.querySelectorAll(".dropdown-item");
+var position = document.getElementById("position");
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4PhZjkcBe1Bggj0AmYosHU2qPHjnwWIid5wYcPNyBcKVchBHCBEuSnApEBArqAtd7mQ/exec";
+
 const accordion = document.getElementsByClassName("accordionElement");
+
 for (i = 0; i < accordion.length; i++) {
     console.log(accordion[i].innerHTML);
     console.log("child: " + accordion[i].children[0].innerHTML);
