@@ -1,5 +1,9 @@
 @import '/Miscellaneous/general.css';
 
+body {
+  overflow-x: hidden;
+}
+
 .text-secondary-grad {
   background: linear-gradient(115deg, var(--background-dark), var(--background));
   -webkit-background-clip: text;
@@ -100,7 +104,7 @@
   margin-left: 5vw;
   margin-right: 3vw;
   border-radius: 15px;
-  border: 10px solid #A13A3C;
+  border: 10px solid var(--accent);
   text-align: center;
   padding: 20px;
   display: flex;
@@ -113,7 +117,7 @@
   border-radius: 15px;
   margin-left: 3vw;
   margin-right: 5vw;
-  border: 10px solid #A13A3C;
+  border: 10px solid var(--accent);
   text-align: center;
   display: flex;
   font-size: 15px;
@@ -121,15 +125,39 @@
 }
 
 footer {
-  border-radius: 15px;
-  border-top: 5px solid #A13A3C;
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background: var(--background-light);
   text-align: center;
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer:first-child {
+  height: 50px;
+  margin-bottom: 0px;
+
+  font-size: 2rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer :nth-child(2) {
+  width: 500px;
 }
 
 .footerContent {
   margin-left: 5vw;
   margin-right: 5vw;
+}
+
+#bottom-footer {
+  margin-bottom: 0px;
+  padding-bottom: 16px;
 }
 
 #partner-blerb > * {
