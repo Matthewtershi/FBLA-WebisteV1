@@ -13,6 +13,7 @@
 html body {
   background: var(--background) !important;
   color: white !important;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -195,7 +196,6 @@ body::-webkit-scrollbar {
 
 /***** Info Card *****/
 .info-card {
-  background: var(--accent-dark);
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
@@ -206,13 +206,41 @@ body::-webkit-scrollbar {
   height: 40vh;
 }
 
-.info-card img {
+.info-card > * {
+  box-shadow: 0px 0px 10px var(--accent-dark);
+
   height: 100%;
-  box-shadow: 0px 0px 10px black;
+  padding: 10px;
+
+  border: 4px solid var(--accent-dark);
   border-radius: 6px;
-  border: 2px solid var(--background);
-  background: white;
 }
+
+.info-card img {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.info-card > span {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-left: 20px;
+}
+
+.info-card-title :first-child {
+  padding-right: 100px;
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  background-image: 
+    linear-gradient(
+      90deg, 
+      var(--accent-dark),
+      var(--accent-dark),
+      var(--background)
+    );
+} 
 
 .info-card .info-card-title {
   width: 100%;

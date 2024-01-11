@@ -83,6 +83,7 @@ html body {
   margin-left: 20px;
   border-radius: 10px;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 .apply-link > * {
@@ -94,7 +95,18 @@ html body {
 .apply-link:hover {
   border-color: white;
   color: white;
-  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 5px white;
+  transition: 0.3s ease-in-out;
+}
+
+.apply-link > a > h2 {
+  color: var(--accent-dark);
+  transition: 0.3s ease-in-out;
+}
+
+.apply-link:hover > a > h2{
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 
 .info-card .info-card-title {
@@ -227,7 +239,7 @@ tr .accordionElement.opening-group.active>.accordionContent.height-three {
   margin-left: 10vw;
   margin-right: 10vw;
   border-radius: 15px;
-  border: 10px solid #A13A3C;
+  border: 10px solid var(--accent-dark);
   text-align: center;
   padding: 20px;
   display: flex;
@@ -278,4 +290,18 @@ tr .accordionElement.opening-group.active>.accordionContent.height-three {
   display: inline-block;
   width: 85%;
   font-size: 1.5rem;
+}
+
+.info-card-title :first-child {
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  
+  background-image: 
+    linear-gradient(
+      90deg, 
+      var(--accent-dark),
+      var(--accent-dark),
+      var(--background)
+    );
 }

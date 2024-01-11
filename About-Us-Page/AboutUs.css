@@ -1,14 +1,48 @@
 @import '/Miscellaneous/node_modules/bootstrap/main.css';
 
 .description {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    border-radius: 15px;
-    border: 10px solid #A13A3C;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    font-size: 30px;
-  }
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border-radius: 15px;
+  border: 10px solid var(--accent-dark);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  font-size: 30px;
+}
+
+#banner {
+  width: 100vw;
+  margin-bottom: 30px;
+}
+
+#banner :first-child {
+  text-align: center;
+  text-transform: uppercase; 
+  display: inline-block;
+  width: 100%;
+  color: var(--accent-dark);
+  font-size: 5rem;
+}
+
+#banner > strong::after {
+  content: "";
+  display: block;
+  transform: translateX(10vw);
+  width: 80%;
+  height: 10px;
+  background: linear-gradient(90deg, var(--background), var(--accent-dark), var(--background));
+  border-radius: 50px;
+}
+
+#banner :nth-child(2) {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: justify;
+  display: inline-block;
+  width: 85%;
+  font-size: 1.5rem;
+}
