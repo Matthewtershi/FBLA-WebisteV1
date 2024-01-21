@@ -106,8 +106,15 @@ body::-webkit-scrollbar {
 
 /***** NAVBAR *****/
 .brandName {
-  font-size: 2rem;
-  color: var(--accent);
+  font-size: 2.5rem;
+  background-image: linear-gradient(
+    to right,  
+    var(--accent), 
+    var(--accent-light)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   margin-left: 2vw;
 }
 
@@ -176,10 +183,6 @@ body::-webkit-scrollbar {
   opacity: 1;
 }
 
-.brandName {
-  font-size: 2rem;
-}
-
 /* Fade in */
 .underline-hover-primary::after {
   content: '';
@@ -206,16 +209,6 @@ body::-webkit-scrollbar {
   height: 40vh;
 }
 
-.info-card > * {
-  box-shadow: 0px 0px 10px var(--accent-dark);
-
-  height: 100%;
-  padding: 10px;
-
-  border: 4px solid var(--accent-dark);
-  border-radius: 6px;
-}
-
 .info-card img {
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
@@ -226,21 +219,6 @@ body::-webkit-scrollbar {
   border-bottom-right-radius: 24px;
   margin-left: 20px;
 }
-
-.info-card-title :first-child {
-  padding-right: 100px;
-  background-size: 100% 5px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-
-  background-image: 
-    linear-gradient(
-      90deg, 
-      var(--accent-dark),
-      var(--accent-dark),
-      var(--background)
-    );
-} 
 
 .info-card .info-card-title {
   width: 100%;

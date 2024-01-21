@@ -13,26 +13,24 @@ body {
 #banner {
   width: 100%;
   height: calc(100vh - 80px);
-  background: linear-gradient(
-    var(--accent) 0%,
-    var(--background) 95%
-  );
+  background: linear-gradient(var(--accent) 0%,
+      var(--background) 95%);
 }
 
 
-#banner > * :nth-child(1) {
+#banner>* :nth-child(1) {
   -webkit-text-stroke: 3px var(--accent);
   background: linear-gradient(190deg, var(--background-light), var(--background-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   text-align: center;
   font-size: 10rem;
   padding-top: 15vh;
   font-weight: bolder;
 }
 
-#banner > * :nth-child(2) {
+#banner>* :nth-child(2) {
   -webkit-text-stroke: 3px var(--accent);
   background: linear-gradient(190deg, var(--background-light), var(--background-dark));
   -webkit-background-clip: text;
@@ -50,7 +48,7 @@ body {
   align-items: center;
 }
 
-.container{
+.container {
   display: flex;
   margin-top: 10vh;
   justify-content: center;
@@ -58,7 +56,7 @@ body {
   padding: 0;
 }
 
-.choice{
+.choice {
   background-color: var(--accent);
   height: 180px;
   box-sizing: border-box;
@@ -67,26 +65,32 @@ body {
   float: left;
   align-items: center;
   transition: width 0.2s;
-  border-radius:3px;
+  border-radius: 3px;
 }
-.expand{
+
+.expand {
   width: 35%;
 }
-.unset{
+
+.unset {
   width: 30%;
   color: black !important;
   background-color: #ddd !important;
 }
-.small{
+
+.small {
   width: 20%;
 }
-.small>div{
+
+.small>div {
   opacity: 0;
 }
-.unset > div > p{
+
+.unset>div>p {
   opacity: 0;
 }
-.expand > div {
+
+.expand>div {
   transition-delay: 200ms;
   opacity: 1;
 }
@@ -119,10 +123,26 @@ body {
   margin-right: 5vw;
   border: 10px solid var(--accent);
   text-align: center;
-  display: flex;
   font-size: 15px;
   float: left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.contact>.info-card-title {
+  padding-top: 20px;
+  width: 70%;
+}
+
+.contact>.info-card-content {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 90%;
+}
+
 
 footer {
   color: var(--accent-dark);
@@ -140,14 +160,10 @@ footer:first-child {
   margin-bottom: 0px;
 
   font-size: 2rem;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-footer :nth-child(2) {
-  width: 500px;
 }
 
 .footerContent {
@@ -160,55 +176,23 @@ footer :nth-child(2) {
   padding-bottom: 16px;
 }
 
-#partner-blerb > * {
+#partner-blerb>* {
   text-align: justify;
 }
 
+.info-card-title> :first-child> :first-child::after {
+  content: '';
+  display: block;
+  width: 130%;
+  height: 0.1em;
+  background:
+    linear-gradient(90deg,
+      var(--background),
+      var(--accent-dark),
+      var(--accent-dark),
+      var(--background));
+  opacity: 1;
 
-
-.info-card-vertical {
-  width: 300px;
-  background: red;
-  height: 700px;
-}
-
-.info-card-vertical img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.info-card-vertical .info-card-vertical-title {
-  width: 100%;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.info-card-vertical .info-card-vertical-title :nth-child(1){
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  justify-content: flex-start;
-}
-
-.info-card-vertical .info-card-vertical-title :nth-child(2){
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin-left: auto;
-  margin-right: 30px;
-  background-color: var(--accent);
-  border-radius: 6px;
-  padding: 0 10px;
-}
-
-.info-card-vertical .info-card-vertical-content {
-  width: 100%;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
-  padding-right: 30px;
-  text-align: justify;
+  /*11.5 is approximately (1-(1/1.3))/2 which is the correct equation to translate the element to the middle. Do not change this number except incase you change the width in which case adjust accoding to forumla*/
+  transform: translateX(-11.5%);
 }
