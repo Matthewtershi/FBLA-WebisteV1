@@ -1,3 +1,5 @@
+form = document.get
+
 //Accordion elements
 const accordion = document.getElementsByClassName("accordionElement");
 for (i = 0; i < accordion.length; i++) {
