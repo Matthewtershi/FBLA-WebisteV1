@@ -47,8 +47,22 @@
   font-size: 1.5rem;
 }
 
-img {
+.info-card > span {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-left: 20px;
+}
+
+.image-wrapper {
+  width: 400px !important;
+  display: flex; 
+  align-items: flex-end;
   padding-bottom: 0px !important;
+}
+
+img {
+  height: auto;
+  width: 100%;
 }
 
 .info-card > * {

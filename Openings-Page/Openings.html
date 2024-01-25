@@ -78,36 +78,15 @@
             </span>
           </div>
           <div class="accordionContent">
-            <form id="myForm"
-              action="https://script.google.com/macros/s/AKfycbxjIXnkiQHjUh1h5x9cAy3kSQmFrQ1ecl15fJvk35MpUcZiVhX2aESZdAVg8P5Hi-WGOQ/exec"
-              method="POST">
-              <div class="mb-3">
-                <label for="pwd">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="John Doe" name="name">
-              </div>
-
-              <div class="mb-3 mt-3">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
-              </div>
-
-              <div class="my-3 applicant-resume" name="resume">
-                <label for="formFile" class="form-label"> Upload Google Drive Link to Resume</label>
-                <input type="text" class="form-control" id="resume"
-                  placeholder="https://docs.google.com/document/...=sharing" name="resume" required>
-              </div>
-              <div>
-              <input type="text" class="form-control invisible" id="dropdownMenuButton" name="position" value="Game Server Engineer" data-position="Game Server Engineer">
-                <button id="btn" id="submitButton" name="submit" type="submit"
-                  class="btn btn-warning shadow-sm">Submit</button>
-              </div>
-
-
-              <div id="NIHAO">
-                <label class="d-none">Result</label>
-                <input type="text" class="my-3 d-none" id="position" name="position">
-              </div>
+            <form name="submit-to-google-sheet">
+              <input name="name" type="name" placeholder="Enter Name" required>
+              <input name="email" type="email" placeholder="Enter Email" required>
+              <input name="resume" type="link" placeholder="https://docs.google.com/document/...=sharing" required>
+              <input name="resume_file" type="file" placeholder="resume.pdf"  required>
+              <button type="submit">Send</button>
             </form>
+
+            
           </div>
         </div>
       </span>

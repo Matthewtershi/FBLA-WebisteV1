@@ -214,12 +214,6 @@ body::-webkit-scrollbar {
   border-bottom-left-radius: 24px;
 }
 
-.info-card > span {
-  border-top-right-radius: 24px;
-  border-bottom-right-radius: 24px;
-  margin-left: 20px;
-}
-
 .info-card .info-card-title {
   width: 100%;
   margin-left: 20px;
