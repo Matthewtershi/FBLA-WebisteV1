@@ -1,16 +1,58 @@
-@import '.../Miscellaneous/general.css';
+#banner {
+  width: 100vw;
+  margin-bottom: 30px;
+}
 
+#banner :first-child {
+  text-align: center;
+  text-transform: uppercase; 
+  display: inline-block;
+  width: 100%;
+  color: var(--accent-dark);
+  font-size: 5rem;
+}
+
+#banner > strong::after {
+  content: "";
+  display: block;
+  transform: translateX(10vw);
+  width: 80%;
+  height: 10px;
+  background: linear-gradient(90deg, var(--background), var(--accent-dark), var(--background));
+  border-radius: 50px;
+}
+
+#banner :nth-child(2) {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: justify;
+  display: inline-block;
+  width: 85%;
+  font-size: 1.5rem;
+}
 
 #application-form-parent {
   border-radius: 10px;
-  background-color: var(--accent);
   width: 80vw;
   color: var(--background-dark);
-  border: 20px solid var(--accent);
+  border: 5px solid var(--accent-dark);
+  box-shadow: 0 0 20px var(--accent-dark);
+  padding: 20px;
 }
 
 #application-form-parent input {
   background: var(--accent-dark);
+  border: 2px solid var(--background);
+}
+
+textarea {
+  background: var(--accent-dark);
+  border: 2px solid var(--background);
+}
+
+#application-form-parent input:focus {
+  background: var(--background);
   border: 2px solid var(--background);
 }
 
@@ -53,25 +95,12 @@
   transform: translateY(-50%);
 }
 
-#header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
-  height: 50px;
-}
-
-#header > *:nth-child(2) {
-  margin-left: auto;
-  background-color: var(--background-light);
-  border: 3px solid var(--background-dark);
-  height: 50px;
-  color: white;
-  border-radius: 10px;
-}
-
 option:hover {
   background: yellow !important;
   background-color: yellow !important;
+  visibility: hidden;
+}
+
+#submitButton > button {
   visibility: hidden;
 }

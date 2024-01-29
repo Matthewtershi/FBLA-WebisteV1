@@ -42,12 +42,14 @@
   </nav>
   
   <div class="auto-center">
+    <div id="banner">
+      <strong> Application Page </strong>
+    </div>
     <div id="application-form-parent" class="">
-      <div id="header">
-        <h2>
-          Application Form
-        </h2>
-
+      <div>
+        <h1>
+          Applying for:
+        </h1>
         <select name="position" id="positionSelector">
           <optgroup label="Programming">
             <option value="Network Manager">Network Manager</option>
@@ -69,49 +71,32 @@
           </optgroup>
         </select>
       </div>
-      <form id="myForm"
-        action="https://script.google.com/macros/s/AKfycby4PhZjkcBe1Bggj0AmYosHU2qPHjnwWIid5wYcPNyBcKVchBHCBEuSnApEBArqAtd7mQ/exec"
-        method="POST">
-        
+      
+      <form name="submit-to-google-sheet">
         <div class="mb-3">
           <label for="pwd">Full Name</label>
-          <input type="text" class="form-control" id="name" placeholder="John Doe" name="name">
+          <input type="text" class="form-control" id="Name" placeholder="Enter First and Last Name" name="Name" required>
         </div>
 
         <div class="mb-3 mt-3">
           <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+          <input type="email" class="form-control" id="Email" placeholder="Enter Email" name="Email" required>
+        </div>
+
+        <div class="mb-3 mt-3">
+          <label for="Personal Statement">Why do you want to work here:</label>
+          <textarea type="text" class="form-control" id="about" placeholder="I want to join this team because..." name="Personal Statement" required></textarea>
         </div>
 
         <div class="my-3 applicant-resume" name="resume">
           <label for="formFile" class="form-label"> Upload Google Drive Link to Resume</label>
-          <input type="text" class="form-control" id="resume"
-            placeholder="https://docs.google.com/document/...=sharing" name="resume" required>
+          <input type="text" class="form-control" id="Resume Link" placeholder="https://docs.google.com/document/...=sharing" name="Resume Link" required>
         </div>
 
-        <!--<div>
-          <label for="personalStatement">Personal Statement:</label>
-          <textarea maxlength="1000" type="text" class="form-control" id="statement"
-            placeholder="I think I would work well here because..." name="statement" required></textarea>
-        </div>-->
-        
         <div>
-          <div id="submitButton" name="submit" type="submit">
-            <p>
-              Submit
-            </p>
-          </div>
-        </div>
-
-        <div class="my-3 d-none" id="loadingIcon">
-          <div class="spinner-border text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        </div>
-
-        <div id="NIHAO">
-          <label class="d-none">Result</label>
-          <input type="text" class="my-3 d-none" id="position" name="position">
+          <button type="submit" id="submitButton" name="submit" type="submit">
+            Submit
+          </button>
         </div>
       </form>
     </div>
