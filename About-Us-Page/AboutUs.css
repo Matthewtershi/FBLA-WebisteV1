@@ -56,6 +56,11 @@
 img {
   aspect-ratio: auto;
   height: auto;
+  background-color: var(--background-light);
+}
+
+.info-card > img {
+  padding-bottom: 0px;
 }
 
 .info-card > * {

@@ -36,24 +36,32 @@
   border-radius: 10px;
   width: 80vw;
   color: var(--background-dark);
-  border: 5px solid var(--accent-dark);
+  border: 2px solid var(--accent-light);
   box-shadow: 0 0 20px var(--accent-dark);
   padding: 20px;
 }
 
 #application-form-parent input {
   background: var(--accent-dark);
-  border: 2px solid var(--background);
+  border: 2px solid var(--accent-light);
+  color: white;
+}
+
+#application-form-parent label {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 textarea {
-  background: var(--accent-dark);
-  border: 2px solid var(--background);
+  background: var(--accent-dark) !important;
+  border: 2px solid var(--accent-light) !important;
+  min-height: 200px !important;
 }
 
 #application-form-parent input:focus {
-  background: var(--background);
-  border: 2px solid var(--background);
+  background: var(--accent-light);
+  border: 2px solid var(--white);
 }
 
 #application-form-parent #submitButton {
@@ -65,12 +73,24 @@ textarea {
   transform: translate(-50%, 0%);
   
   width: 100%;
-  height: 40px;
+  height: 60px;
   border-radius: 10px;
-  background-color: var(--accent-dark);
+
+  background: var(--accent-dark);
+  
   color: white;
   text-align: center;
   border: 3px solid var(--background-dark);
+
+  font-size: 1.5rem;
+  font-weight: bolder;
+  transition: all 0.2s ease-in-out;
+}
+
+#application-form-parent #submitButton:hover {
+  border: 5px solid var(--accent-light);
+  
+  transition: all 0.2s ease-in-out;
 }
 
 #personal-statement {
@@ -95,12 +115,37 @@ textarea {
   transform: translateY(-50%);
 }
 
-option:hover {
-  background: yellow !important;
-  background-color: yellow !important;
+#submitButton > button {
   visibility: hidden;
 }
 
-#submitButton > button {
-  visibility: hidden;
+#positionRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#divider {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  content: " ";
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg,  
+    var(--accent-dark),
+    var(--accent-dark)
+  );
+  border-radius: 10px;
+}
+
+#positionRow:first-child {
+  color: white;
+}
+
+#positionRow :nth-child(2) {
+  background: var(--accent-dark);
+  border: 2px solid var(--accent-light);
+  border-radius: 10px;
+  color: white;
 }

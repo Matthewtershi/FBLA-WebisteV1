@@ -12,7 +12,7 @@ body {
 
 #banner {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 90vh;
   background: linear-gradient(var(--accent) 0%,
       var(--background) 95%);
 }
@@ -25,20 +25,37 @@ body {
   -webkit-text-fill-color: transparent;
 
   text-align: center;
-  font-size: 10rem;
+  font-size: 8vw;
   padding-top: 15vh;
   font-weight: bolder;
+}
+
+@keyframes moving-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  20% {
+    background-position: 100% 50%;
+  }
+  40% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #banner>* :nth-child(2) {
   -webkit-text-stroke: 3px var(--accent);
   background: linear-gradient(190deg, var(--background-light), var(--background-dark));
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-align: center;
-  font-size: 15rem;
+  font-size: 9vw;
   font-weight: bolder;
+  
+  animation: moving-gradient 5s linear infinite;
 }
 
 
