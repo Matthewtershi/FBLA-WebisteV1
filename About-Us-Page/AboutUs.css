@@ -13,6 +13,23 @@
   font-size: 30px;
 }
 
+footer {
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background: var(--background-light);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #1c67fc;
+  box-shadow:none;
+  text-decoration: underline;
+}
+
 #banner {
   width: 100vw;
   margin-bottom: 30px;

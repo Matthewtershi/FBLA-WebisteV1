@@ -183,6 +183,21 @@ html body {
   width: 95vw;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background: var(--background-light);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .accordionElement.opening-group>.accordionHeader {
   background-color: var(--background);
 
