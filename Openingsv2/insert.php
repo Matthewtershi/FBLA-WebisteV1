@@ -8,6 +8,16 @@ $resume = $_POST["resume"];
 $position = $_POST["position"];
 
 if (!empty($date) || !empty($name) || !empty($email) || !empty($resume) || !empty($position)) {
+
+    mail(
+        $email,
+        "MYTHOS Job Opening",
+        "Thank you for applying as a {$position}!",
+        "From: mythosgamescontact@gmail.com";
+    
+    )
+    echo "Email Sent";
+
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
