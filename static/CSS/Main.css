@@ -1,0 +1,56 @@
+@import 'general.css';
+
+body {
+  background: black;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+#mouse_blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(20vmin);
+  z-index: -10;
+}
+
+#mouse_glow {
+  z-index: -11;
+  background: linear-gradient(
+    to right,
+    var(--accent-jacob),
+    var(--accent-jacob),
+    var(--accent-jacob-dark)
+  );
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  width: 45vmin;
+  height: 45vmin;
+  border-radius: 50%;
+  animation: rotate 20s infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  100% {
+    scale: 1;
+  }
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 hidden=[".config"]
 
 # hosting is currently hardcoded for this language
@@ -183,3 +184,20 @@ requiredFiles = [".replit", "replit.nix", ".config"]
 [deployment]
 publicDir = "/"
 deploymentTarget = "static"
+=======
+entrypoint = "main.py"
+modules = ["nodejs-20:v8-20230920-bd784b9", "python-3.10:v20-20230824-f46249a"]
+
+hidden = [".pythonlibs"]
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "python3 main.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+>>>>>>> refs/remotes/origin/main
